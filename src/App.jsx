@@ -1,15 +1,14 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import BasePage from './Pages/BasePage'
 import './global.css'
-import Header from './Components/Header'
-import Main from './Components/Main'
-import Footer from './Components/Footer'
+import GlobalStyles from './globalStyles'
+
 function App() {
 
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <GlobalStyles/>      
+        <BasePage/>
     </>
   )
 }
