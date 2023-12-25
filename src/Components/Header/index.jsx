@@ -7,11 +7,16 @@ export default function Header() {
         <H1Style>Agrofit Pro</H1Style>
         <NavStyle>
           <UlStyle>
-            <LiStyle>Pragas</LiStyle>
-            <LiStyle>Ingredientes Ativos</LiStyle>
-            <LiStyle>Produtos Formulados</LiStyle>
-            <LiStyle>Produtos Técnicos</LiStyle>
-            <LiStyle>Relatórios</LiStyle>
+            <LiStyle><AStyle>Pragas</AStyle>
+            </LiStyle>
+            <LiStyle><AStyle>Ingredientes Ativos</AStyle>
+            </LiStyle>
+            <LiStyle><AStyle>Produtos Formulados</AStyle>
+            </LiStyle>
+            <LiStyle><AStyle>Produtos Técnicos</AStyle>
+            </LiStyle>
+            <LiStyle><AStyle>Relatórios</AStyle>
+            </LiStyle>
           </UlStyle>
         </NavStyle>
       </HeaderStyle>
@@ -23,12 +28,15 @@ const HeaderStyle = styled.header`
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 10px;
-    background: rgb(0,156,55);
-    background: linear-gradient(90deg, rgba(0,156,55,1) 0%, rgba(254,224,0,1) 100%);
+    padding: 5px 100px;
+    border-bottom: 1px solid var(--green200);
+    position: fixed;
+    width: 100%;
+    background: var(--green100);
 `
 const H1Style = styled.h1`
     text-align: center;
+    color: var(--green700);
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 `
@@ -36,14 +44,32 @@ const H1Style = styled.h1`
 const UlStyle = styled.ul`
     display: flex;
     flex-direction: row;
-    gap: 5;
+    gap: 1px;
     justify-content: space-between;
     list-style-type: none;
 `
 const LiStyle = styled.li`
-    
+
 `
 
 const NavStyle = styled.nav`
-    
+    padding: .7rem 0;
+`
+
+const AStyle = styled.a`
+  text-decoration: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border: 1px solid var(--green300);
+  border-radius:4px;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--green700);
+
+  &:hover{
+    border: 1px solid var(--green300);
+    background-color: var(--green700);
+    border-radius:4px;
+    color: var(--green100);
+    transition: ease-in 0.2s;
+  }
 `
